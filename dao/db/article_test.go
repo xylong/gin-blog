@@ -36,5 +36,8 @@ func TestGetArticleList(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
+	for _, article := range rows {
+		t.Logf("%v", article)
+	}
 	t.Logf("%d", len(rows))
 }

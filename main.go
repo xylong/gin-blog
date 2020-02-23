@@ -1,16 +1,12 @@
 package main
 
 import (
+	"gin-blog/controller"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 func main() {
-	r:=gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK,gin.H{
-				"message": "pong",
-			})
-		})
+	r := gin.Default()
+	r.GET("/", controller.Index)
 	r.Run()
 }

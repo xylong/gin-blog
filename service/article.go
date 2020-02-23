@@ -12,6 +12,7 @@ func GetArticles(pageNum, pageSize int) (articles []*model.ArticleRecord, err er
 		return
 	}
 	if len(list) <= 0 {
+
 		return
 	}
 	// 获取文章对应分类
@@ -38,8 +39,6 @@ func GetArticles(pageNum, pageSize int) (articles []*model.ArticleRecord, err er
 
 // 获取分类ID
 func getCategoryIds(articles []*model.ArticleInfo) (ids []int64) {
-	length := len(articles)
-	ids = make([]int64, length, length)
 	for _, article := range articles {
 		cid := article.CategoryId
 		// 去重
@@ -48,6 +47,33 @@ func getCategoryIds(articles []*model.ArticleInfo) (ids []int64) {
 				ids = append(ids, cid)
 			}
 		}
+	}
+	return
+}
+
+func GetArticlesByCategory(categoryId, pageNum, pageSize int) (articles []*model.ArticleRecord, err error) {
+	list, err := db.GetArticleByCategory(categoryId, pageNum, pageSize)
+	if err != nil || len(list) <= 0 {
+		return
+	}
+	// 获取文章对应分类
+	categoryIds := getCategoryIds(list)
+	categories, err := db.GetCategories(categoryIds)
+	if err != nil {
+		return
+	}
+	// 合并
+	for _, article := range list {
+		articleRecord := &model.ArticleRecord{
+			ArticleInfo: *article,
+		}
+		for _, category := range categories {
+			if article.CategoryId == category.Id {
+				articleRecord.Category = *category
+				break
+			}
+		}
+		articles = append(articles, articleRecord)
 	}
 	return
 }

@@ -16,12 +16,12 @@ func InsertArticle(detail *model.ArticleDetail) (id int64, err error) {
 }
 
 // GetArticleList 文章列表
-func GetArticleList(pageNum, pageSize int) (categories []*model.ArticleInfo, err error) {
+func GetArticleList(pageNum, pageSize int) (articles []*model.ArticleInfo, err error) {
 	if pageNum <= 0 || pageSize <= 0 {
 		return
 	}
 	sql := "select id,category_id,title,summary,username,view_count,comment_count,create_time from article where status=1 order by create_time desc limit ?,?"
-	err = DB.Select(&categories, sql, pageNum-1, pageSize)
+	err = DB.Select(&articles, sql, pageNum-1, pageSize)
 	if err != nil {
 		return
 	}

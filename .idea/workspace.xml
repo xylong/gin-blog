@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1479f137-5102-431c-a66e-48c303a1bb37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/service/article.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/db/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/db/article.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/db/article_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/db/article_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/article.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +26,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="20" />
+          <entry key="gitignore" value="1" />
+          <entry key="go" value="35" />
           <entry key="mod" value="1" />
           <entry key="sql" value="1" />
         </counts>
@@ -30,18 +35,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="DTD" value="1" />
-          <entry key="Go" value="20" />
+          <entry key="Go" value="35" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="3710" />
+          <entry key="gitignore" value="7" />
+          <entry key="go" value="4144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="3710" />
+          <entry key="Go" value="4144" />
+          <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
     </session>
@@ -49,10 +57,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/category.go">
+        <entry file="file://$PROJECT_DIR$/controller/handler.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+              <folding>
+                <element signature="e#20#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/article.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="e#17#64#0" expanded="true" />
               </folding>
@@ -61,13 +81,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service/article.go">
+        <entry file="file://$PROJECT_DIR$/dao/db/article.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding>
-                <element signature="e#17#64#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -75,8 +92,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/article.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="104">
+              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="e#14#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,16 +134,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/model/category.go" />
         <option value="$PROJECT_DIR$/model/article.go" />
         <option value="$PROJECT_DIR$/dao/db/db.go" />
         <option value="$PROJECT_DIR$/dao/db/category.go" />
         <option value="$PROJECT_DIR$/dao/db/category_test.go" />
+        <option value="$PROJECT_DIR$/service/category.go" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/controller/handler.go" />
+        <option value="$PROJECT_DIR$/service/article.go" />
         <option value="$PROJECT_DIR$/dao/db/article_test.go" />
         <option value="$PROJECT_DIR$/dao/db/article.go" />
-        <option value="$PROJECT_DIR$/service/category.go" />
-        <option value="$PROJECT_DIR$/service/article.go" />
       </list>
     </option>
   </component>
@@ -141,6 +172,22 @@
             <path>
               <item name="gin-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="gin-blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gin-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gin-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gin-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gin-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gin-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gin-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gin-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -178,7 +225,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestGetArticleList in gin-blog/dao/db">
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gin-blog" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestGetAllCategories in gin-blog/dao/db" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="gin-blog" />
       <working_directory value="$PROJECT_DIR$/dao/db" />
@@ -223,62 +278,52 @@
       <pattern value="^TestInsertCategory$" />
       <method v="2" />
     </configuration>
-    <configuration name="gobench gin-blog/dao/db" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="gin-blog" />
-      <working_directory value="$PROJECT_DIR$/dao/db" />
-      <framework value="gobench" />
-      <kind value="PACKAGE" />
-      <package value="gin-blog/dao/db" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go Test.gobench gin-blog/dao/db" />
       <item itemvalue="Go Test.TestGetAllCategories in gin-blog/dao/db" />
       <item itemvalue="Go Test.TestInsertCategory in gin-blog/dao/db" />
       <item itemvalue="Go Test.TestInsertArticle in gin-blog/dao/db" />
       <item itemvalue="Go Test.TestGetArticleList in gin-blog/dao/db" />
+      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Test.TestGetArticleList in gin-blog/dao/db" />
         <item itemvalue="Go Test.TestInsertArticle in gin-blog/dao/db" />
         <item itemvalue="Go Test.TestInsertCategory in gin-blog/dao/db" />
         <item itemvalue="Go Test.TestGetAllCategories in gin-blog/dao/db" />
-        <item itemvalue="Go Test.gobench gin-blog/dao/db" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGetCategory_in_gin-blog_dao_db - 2020.02.20 at 22h 37m 12s.xml">
-      <configuration name="TestGetCategory in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="go_test_gin-blog_dao_db - 2020.02.20 at 22h 37m 39s.xml">
-      <configuration name="go test gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetCategories_in_gin-blog_dao_db - 2020.02.20 at 22h 41m 26s.xml">
-      <configuration name="TestGetCategories in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="gobench_gin-blog_dao_db - 2020.02.20 at 22h 41m 40s.xml">
-      <configuration name="gobench gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAllCategories_in_gin-blog_dao_db - 2020.02.20 at 22h 43m 05s.xml">
-      <configuration name="TestGetAllCategories in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestInsertCategory_in_gin-blog_dao_db - 2020.02.20 at 22h 45m 38s.xml">
-      <configuration name="TestInsertCategory in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestInsertArticle_in_gin-blog_dao_db - 2020.02.20 at 23h 21m 45s.xml">
-      <configuration name="TestInsertArticle in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.20 at 23h 27m 41s.xml">
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 16h 49m 47s.xml">
       <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.20 at 23h 29m 29s.xml">
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 16h 51m 01s.xml">
       <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.20 at 23h 29m 50s.xml">
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 16h 51m 11s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 11m 32s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 12m 06s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 12m 59s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 14m 36s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 15m 00s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 27m 40s.xml">
+      <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetArticleList_in_gin-blog_dao_db - 2020.02.23 at 17h 29m 11s.xml">
       <configuration name="TestGetArticleList in gin-blog/dao/db" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -287,7 +332,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
@@ -296,7 +341,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3296433" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.399754" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -316,21 +361,23 @@
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.io</proxy>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/dao/db/article.go</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/go.mod">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -354,16 +401,6 @@
     <entry file="file://$PROJECT_DIR$/blogger_2020-02-22.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/db/article_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="e#12#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/db/db.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -371,23 +408,6 @@
           <folding>
             <element signature="e#12#86#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/category.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#17#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/db/article.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -401,20 +421,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/category.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#17#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding>
+            <element signature="e#20#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/golang/pkg/mod/github.com/jmoiron/sqlx@v1.2.0/sqlx.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="319" column="14" selection-start-line="319" selection-start-column="14" selection-end-line="319" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/db/article_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/article.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="104">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/article.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
             <element signature="e#17#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="e#14#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/db/article.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="34" />
         </state>
       </provider>
     </entry>
